@@ -1,0 +1,220 @@
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <title>Jogo da Vida</title>
+    
+    <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+     <div id="game">
+         <table id="table" class="game-matrix">
+             <tbody id="tbody">
+                <tr id="line0">
+                    <td id="cell-1" title="Celula 1" class="cell"></td>
+                    <td id="cell-2" title="Celula 2" class="cell"></td>
+                    <td id="cell-3" title="Celula 3" class="cell"></td>
+                    <td id="cell-4" title="Celula 4" class="cell"></td>
+                    <td id="cell-5" title="Celula 5" class="cell"></td>
+                    <td id="cell-6" title="Celula 6" class="cell"></td>
+                    <td id="cell-7" title="Celula 7" class="cell"></td>
+                    <td id="cell-8" title="Celula 8" class="cell"></td>
+                    <td id="cell-9" title="Celula 9" class="cell"></td>
+                    <td id="cell-10" title="Celula 10" class="cell"></td>
+                    <!-- <td id="cell-11" title="Celula 11" class="cell"></td>
+                    <td id="cell-12" title="Celula 12" class="cell"></td>
+                    <td id="cell-13" title="Celula 13" class="cell"></td>
+                    <td id="cell-14" title="Celula 14" class="cell"></td>
+                    <td id="cell-15" title="Celula 15" class="cell"></td>
+                    <td id="cell-16" title="Celula 16" class="cell"></td> -->
+                   </tr>
+                <tr id="line1">
+                   <td id="cell-17" title="Celula 17" class="cell"></td>
+                   <td id="cell-18" title="Celula 18" class="cell"></td>
+                   <td id="cell-19" title="Celula 19" class="cell"></td>
+                   <td id="cell-20" title="Celula 20" class="cell"></td>
+                   <td id="cell-21" title="Celula 21" class="cell"></td>
+                   <td id="cell-22" title="Celula 22" class="cell"></td>
+                   <td id="cell-23" title="Celula 23" class="cell"></td>
+                   <td id="cell-24" title="Celula 24" class="cell"></td>
+                   <td id="cell-25" title="Celula 25" class="cell"></td>
+                   <td id="cell-26" title="Celula 26" class="cell"></td>
+                   <!-- <td id="cell-27" title="Celula 27" class="cell"></td>
+                   <td id="cell-28" title="Celula 28" class="cell"></td>
+                   <td id="cell-29" title="Celula 29" class="cell"></td>
+                   <td id="cell-30" title="Celula 30" class="cell"></td>
+                   <td id="cell-31" title="Celula 31" class="cell"></td>
+                   <td id="cell-32" title="Celula 32" class="cell"></td> -->
+                </tr>
+                <tr id="line2">
+                   <td id="cell-33" title="Celula 33" class="cell"></td>
+                   <td id="cell-34" title="Celula 34" class="cell"></td>
+                   <td id="cell-35" title="Celula 35" class="cell"></td>
+                   <td id="cell-36" title="Celula 36" class="cell"></td>
+                   <td id="cell-37" title="Celula 37" class="cell"></td>
+                   <td id="cell-38" title="Celula 38" class="cell"></td>
+                   <td id="cell-39" title="Celula 39" class="cell"></td>
+                   <td id="cell-40" title="Celula 40" class="cell"></td>
+                   <td id="cell-41" title="Celula 41" class="cell"></td>
+                   <td id="cell-42" title="Celula 42" class="cell"></td>
+                   <!-- <td id="cell-43" title="Celula 43" class="cell"></td>
+                   <td id="cell-44" title="Celula 44" class="cell"></td>
+                   <td id="cell-45" title="Celula 45" class="cell"></td>
+                   <td id="cell-46" title="Celula 46" class="cell"></td>
+                   <td id="cell-47" title="Celula 47" class="cell"></td>
+                   <td id="cell-48" title="Celula 48" class="cell"></td> -->
+               </tr>
+               <tr id="line3">
+                   <td id="cell-49" title="Celula 49" class="cell"></td>
+                   <td id="cell-50" title="Celula 50" class="cell"></td>
+                   <td id="cell-51" title="Celula 51" class="cell"></td>
+                   <td id="cell-52" title="Celula 52" class="cell"></td>
+                   <td id="cell-53" title="Celula 53" class="cell alive"></td>
+                   <td id="cell-54" title="Celula 54" class="cell"></td>
+                   <td id="cell-55" title="Celula 55" class="cell"></td>
+                   <td id="cell-56" title="Celula 56" class="cell"></td>
+                   <td id="cell-57" title="Celula 57" class="cell"></td>
+                   <td id="cell-58" title="Celula 58" class="cell"></td>
+                   <!-- <td id="cell-59" title="Celula 59" class="cell"></td>
+                   <td id="cell-60" title="Celula 60" class="cell"></td>
+                   <td id="cell-61" title="Celula 61" class="cell"></td>
+                   <td id="cell-62" title="Celula 62" class="cell"></td>
+                   <td id="cell-63" title="Celula 63" class="cell"></td>
+                   <td id="cell-64" title="Celula 64" class="cell"></td> -->
+                   </tr>
+                <tr id="line4">
+                   <td id="cell-65" title="Celula 65" class="cell"></td>
+                   <td id="cell-66" title="Celula 66" class="cell"></td>
+                   <td id="cell-67" title="Celula 67" class="cell"></td>
+                   <td id="cell-68" title="Celula 68" class="cell"></td>
+                   <td id="cell-69" title="Celula 69" class="cell alive"></td>
+                   <td id="cell-70" title="Celula 70" class="cell"></td>
+                   <td id="cell-71" title="Celula 71" class="cell"></td>
+                   <td id="cell-72" title="Celula 72" class="cell"></td>
+                   <td id="cell-73" title="Celula 73" class="cell"></td>
+                   <td id="cell-74" title="Celula 74" class="cell"></td>
+                   <!-- <td id="cell-75" title="Celula 75" class="cell"></td>
+                   <td id="cell-76" title="Celula 76" class="cell"></td>
+                   <td id="cell-77" title="Celula 77" class="cell"></td>
+                   <td id="cell-78" title="Celula 78" class="cell"></td>
+                   <td id="cell-79" title="Celula 79" class="cell"></td>
+                   <td id="cell-80" title="Celula 80" class="cell"></td> -->
+                </tr>
+                <tr id="line5">
+                   <td id="cell-81" title="Celula 81" class="cell"></td>
+                   <td id="cell-82" title="Celula 82" class="cell"></td>
+                   <td id="cell-83" title="Celula 83" class="cell"></td>
+                   <td id="cell-84" title="Celula 84" class="cell"></td>
+                   <td id="cell-85" title="Celula 85" class="cell alive"></td>
+                   <td id="cell-86" title="Celula 86" class="cell"></td>
+                   <td id="cell-87" title="Celula 87" class="cell"></td>
+                   <td id="cell-88" title="Celula 88" class="cell"></td>
+                   <td id="cell-89" title="Celula 89" class="cell"></td>
+                   <td id="cell-90" title="Celula 90" class="cell"></td>
+                   <!-- <td id="cell-91" title="Celula 91" class="cell"></td>
+                   <td id="cell-92" title="Celula 92" class="cell"></td>
+                   <td id="cell-93" title="Celula 93" class="cell"></td>
+                   <td id="cell-94" title="Celula 94" class="cell"></td>
+                   <td id="cell-95" title="Celula 95" class="cell"></td>
+                   <td id="cell-96" title="Celula 96" class="cell"></td> -->
+                </tr>
+                <tr id="line6">
+                   <td id="cell-97" title="Celula 97" class="cell"></td>
+                   <td id="cell-98" title="Celula 98" class="cell"></td>
+                   <td id="cell-99" title="Celula 99" class="cell"></td>
+                   <td id="cell-100" title="Celula 100" class="cell"></td>
+                   <td id="cell-101" title="Celula 101" class="cell"></td>
+                   <td id="cell-102" title="Celula 102" class="cell"></td>
+                   <td id="cell-103" title="Celula 103" class="cell"></td>
+                   <td id="cell-104" title="Celula 104" class="cell"></td>
+                   <td id="cell-105" title="Celula 105" class="cell"></td>
+                   <td id="cell-106" title="Celula 106" class="cell"></td>
+                   <!-- <td id="cell-107" title="Celula 107" class="cell"></td>
+                   <td id="cell-108" title="Celula 108" class="cell"></td>
+                   <td id="cell-109" title="Celula 109" class="cell"></td>
+                   <td id="cell-110" title="Celula 110" class="cell"></td>
+                   <td id="cell-111" title="Celula 111" class="cell"></td>
+                   <td id="cell-112" title="Celula 112" class="cell"></td> -->
+                </tr>
+                <tr id="line7">
+                   <td id="cell-113" title="Celula 113" class="cell"></td>
+                   <td id="cell-114" title="Celula 114" class="cell"></td>
+                   <td id="cell-115" title="Celula 115" class="cell"></td>
+                   <td id="cell-116" title="Celula 116" class="cell"></td>
+                   <td id="cell-117" title="Celula 117" class="cell"></td>
+                   <td id="cell-118" title="Celula 118" class="cell"></td>
+                   <td id="cell-119" title="Celula 119" class="cell"></td>
+                   <td id="cell-120" title="Celula 120" class="cell"></td>
+                   <td id="cell-121" title="Celula 121" class="cell"></td>
+                   <td id="cell-122" title="Celula 122" class="cell"></td>
+                   <!-- <td id="cell-123" title="Celula 123" class="cell"></td>
+                   <td id="cell-124" title="Celula 124" class="cell"></td>
+                   <td id="cell-125" title="Celula 125" class="cell"></td>
+                   <td id="cell-126" title="Celula 126" class="cell"></td>
+                   <td id="cell-127" title="Celula 127" class="cell"></td>
+                   <td id="cell-128" title="Celula 128" class="cell"></td> -->
+                </tr>
+                <tr id="line8">
+                   <td id="cell-129" title="Celula 129" class="cell"></td>
+                   <td id="cell-130" title="Celula 130" class="cell"></td>
+                   <td id="cell-131" title="Celula 131" class="cell"></td>
+                   <td id="cell-132" title="Celula 132" class="cell"></td>
+                   <td id="cell-133" title="Celula 133" class="cell"></td>
+                   <td id="cell-134" title="Celula 134" class="cell"></td>
+                   <td id="cell-135" title="Celula 135" class="cell"></td>
+                   <td id="cell-136" title="Celula 136" class="cell"></td>
+                   <td id="cell-137" title="Celula 137" class="cell"></td>
+                   <td id="cell-138" title="Celula 138" class="cell"></td>
+                   <!-- <td id="cell-139" title="Celula 139" class="cell"></td>
+                   <td id="cell-140" title="Celula 140" class="cell"></td>
+                   <td id="cell-141" title="Celula 141" class="cell"></td>
+                   <td id="cell-142" title="Celula 142" class="cell"></td>
+                   <td id="cell-143" title="Celula 143" class="cell"></td>
+                   <td id="cell-144" title="Celula 144" class="cell"></td> -->
+                </tr>
+                <tr id="line9">
+                   <td id="cell-145" title="Celula 145" class="cell"></td>
+                   <td id="cell-146" title="Celula 146" class="cell"></td>
+                   <td id="cell-147" title="Celula 147" class="cell"></td>
+                   <td id="cell-148" title="Celula 148" class="cell"></td>
+                   <td id="cell-149" title="Celula 149" class="cell"></td>
+                   <td id="cell-150" title="Celula 150" class="cell"></td>
+                   <td id="cell-151" title="Celula 151" class="cell"></td>
+                   <td id="cell-152" title="Celula 152" class="cell"></td>
+                   <td id="cell-153" title="Celula 153" class="cell"></td>
+                   <td id="cell-154" title="Celula 154" class="cell"></td>
+                   <!-- <td id="cell-155" title="Celula 155" class="cell"></td>
+                   <td id="cell-156" title="Celula 156" class="cell"></td>
+                   <td id="cell-157" title="Celula 157" class="cell"></td>
+                   <td id="cell-158" title="Celula 158" class="cell"></td>
+                   <td id="cell-159" title="Celula 159" class="cell"></td>
+                   <td id="cell-160" title="Celula 160" class="cell"></td> -->
+                </tr>
+                <tr id="line10">
+                   <td id="cell-161" title="Celula 161" class="cell"></td>
+                   <td id="cell-162" title="Celula 162" class="cell"></td>
+                   <td id="cell-163" title="Celula 163" class="cell"></td>
+                   <td id="cell-164" title="Celula 164" class="cell"></td>
+                   <td id="cell-165" title="Celula 165" class="cell"></td>
+                   <td id="cell-166" title="Celula 166" class="cell"></td>
+                   <td id="cell-167" title="Celula 167" class="cell"></td>
+                   <td id="cell-168" title="Celula 168" class="cell"></td>
+                   <td id="cell-169" title="Celula 169" class="cell"></td>
+                   <td id="cell-170" title="Celula 170" class="cell"></td>
+                   <!-- <td id="cell-171" title="Celula 171" class="cell"></td>
+                   <td id="cell-172" title="Celula 172" class="cell"></td>
+                   <td id="cell-173" title="Celula 173" class="cell"></td>
+                   <td id="cell-174" title="Celula 174" class="cell"></td>
+                   <td id="cell-175" title="Celula 175" class="cell"></td>
+                   <td id="cell-176" title="Celula 176" class="cell"></td> -->
+                </tr>
+                
+             </tbody>
+         </table>
+    </div>
+    <div id="controls">
+       <button id="next">Proxima Geração</button>
+    </div>
+    <script src="./jquery.min.js"></script>
+    <script src="./main.js"></script>
+ </body>
+</html>

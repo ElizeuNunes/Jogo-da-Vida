@@ -1,0 +1,46 @@
+body {
+    margin: auto;
+    width: 50%;
+    margin-top: 10px;
+}
+
+
+table.game-matrix {
+    border-collapse: collapse
+}
+
+table.game-matrix td {
+    border: 1px solid #000
+}
+
+.cell {
+    background-color: #c2ebc8;
+    color: #999;
+    font-size: 12px;
+    height: 22px;
+    text-align: center;
+    width: 22px
+}
+
+.cell.hover {
+    background-color: #0f0
+}
+
+.cell.alive {
+    background-color: #00f
+}
+
+.cell.hover.alive {
+    background-color: red
+}
+
+#controls {
+    margin: 20px 0
+}
+
+#controls button {
+    background: #a3a7a5;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-size: 18px
+}
