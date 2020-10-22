@@ -12,4 +12,4 @@ O desafio foi desenvolvido utilizando as seguintes tecnologias
 
 ## Como iniciar o game
 
-Ele é bem simples, só apertar em Proxima Geração que ele exibirá a proxima geração da celula, eu não desenvolvi por completo, porém entendi como funciona a logica do jogo. 
+Ele é bem simples, só apertar em Proxima Geração que ele exibirá a proxima geração da celula, eu não consegui desenvolvi por completo, porém entendi como funciona a logica do jogo. 
